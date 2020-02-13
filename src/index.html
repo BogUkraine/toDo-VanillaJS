@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.muicss.com/mui-latest/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.muicss.com/mui-latest/js/mui.min.js"></script>
+    <title>toDo</title>
+</head>
+<body>
+    <div id="sidebar">
+        <div class="mui--text-white mui--text-display1 mui--align-vertical">Note list</div>
+        <div class="sidebar__author">by Bohdan Lysov</div>
+    </div>
+    
+    <div id="content" class="mui-container-fluid">
+    <div class="mui-row">
+        <div class="mui-col-sm-10 mui-col-sm-offset-1">
+        <br>
+        <br>
+        <div class="mui--text-black-54 mui--text-body2">Urgent notes</div>
+        <div class="mui-divider"></div>
+        <br>
+        <br>
+
+        <div id="note-list-urgent"></div>
+
+        <br>
+        <div class="mui--text-black-54 mui--text-body2">Your notes</div>
+        <div class="mui-divider"></div>
+        <br>
+        
+        <div id="note-list"></div>
+        <!-- <div class="mui--text-headline">MUI Acquires New Features</div>
+        <div class="mui--text-black-54">By <a href="#">Team MUI</a> 1 week ago</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis aliquam ipsum sed dignissim. Sed ac accumsan odio. Vivamus tristique dignissim neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc cursus felis nec purus condimentum vestibulum. Donec mauris nisi, sollicitudin eget iaculis id, suscipit id odio. <a href="#">Read more...</a></div>
+        </div> -->
+
+        <form class="mui-form" id="form">
+            <legend>Add note</legend>
+            <div class="mui-textfield">
+              <input type="text" placeholder="Title" id="title">
+            </div>
+            <div class="mui-textfield">
+              <textarea placeholder="Description" id="description"></textarea>
+            </div>
+            <div class="mui-select">
+                <select id="priority">
+                  <option>High priority</option>
+                  <option>Normal priority</option>
+                  <option>Low priority</option>
+                  <option>Without priority</option>
+                </select>
+                <label>Priority</label>
+            </div>
+            <input type="color" id="color" value="#39a1f4">
+            <button type="submit" class="mui-btn mui-btn--primary" id="submit">Submit</button>
+        </form>
+
+        <div class="button-holder">
+            <button class="mui-btn mui-btn--fab mui-btn--primary" id="addItem">+</button>
+        </div>
+    </div>
+</body>
+</html>
