@@ -1,0 +1,40 @@
+{
+  "name": "todo-vanillajs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BogUkraine/toDo-VanillaJS.git"
+  },
+  "keywords": [
+    "vanilla",
+    "js",
+    "javascript",
+    "todo"
+  ],
+  "author": "Bohdan Lysov <BogUkraine@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BogUkraine/toDo-VanillaJS/issues"
+  },
+  "homepage": "https://github.com/BogUkraine/toDo-VanillaJS#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.19.1",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1"
+  }
+}
