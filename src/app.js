@@ -9,6 +9,19 @@ const inputTitle = document.getElementById('title');
 const inputDescription = document.getElementById('description');
 const inputPriority = document.getElementById('priority');
 const inputColor = document.getElementById('color');
+const closeButton = document.getElementById('close-form');
+
+window.addEventListener('load', NoteItem.renderList);
+
+closeButton.addEventListener('click', () => {
+    event.preventDefault();
+    if(submitButton.disabled === false) {
+        form.style.display = 'none';
+        addItemButton.disabled = false;
+        inputTitle.value = '';
+        inputDescription.value = '';
+    }
+});
 
 addItemButton.addEventListener('click', () => {
     if(form.style.display === '' || form.style.display === 'none') {
@@ -20,6 +33,7 @@ addItemButton.addEventListener('click', () => {
 submitButton.addEventListener('click', (event) => {
     event.preventDefault();
     submitButton.disabled = true;
+    closeButton.disabled = true;
     
     const note = {
         title: inputTitle.value,
@@ -33,31 +47,8 @@ submitButton.addEventListener('click', (event) => {
         inputTitle.value = '';
         inputDescription.value = '';
         form.style.display = 'none';
+        closeButton.disabled = false;
         submitButton.disabled = false;
         addItemButton.disabled = false;
     })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// window.addEventListener('click', (event) => {
-//     if(form.style.display === 'block' 
-//         && event.target !== form
-//         && event.target !== addItemButton) {
-//         console.log(event.target, 'window click')
-//         form.style.display = 'none';
-//         addItemButton.disabled = false;
-        
-//     }
-// })
